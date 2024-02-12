@@ -1,0 +1,205 @@
+.carousel-container-main {
+    height: 80vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.42s all;
+}
+
+.carousel-container-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    box-shadow: inset 159px -196px 506px 54px rgba(0,0,0,0.72);
+    transition: 0.42s all;
+}
+
+.carousel-movie-details {
+    position: absolute;
+    color: white;
+    top: 35vh;
+    margin-left: 8vmax;
+    transition: 0.12s all;
+    height: 33vh;
+}
+
+.carousel-movie-details > h1 {
+    font-size: 3.5vmax;
+}
+
+.carousel-container-main > img {
+    width: 100%;
+    height: 80vh;
+    transition: 0.42s all;
+}
+
+.carousel-container-main > img.hidden {
+    opacity: 0;
+    transition: 0.42s all;
+}
+
+.carousel-movie-details-inline {
+    display: flex;
+    gap: 1vmax;
+    align-items: center;
+    transition: 0.42s all;
+}
+
+.carousel-movie-details-inline > p {
+    display: flex;
+}
+
+.details-movie-details {
+    opacity: 0.8;
+}
+
+.watch-now-button-carousel {
+    text-decoration: none;
+    color: black;
+    background-color: #00acc1;
+    position: relative;
+    top: 0.2vmax;
+    border-radius: 25px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+
+    padding: 1vmax;
+    font-size: 15px;
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 2px;
+
+    transition: 0.42s all;
+}
+
+.watch-now-button-carousel:hover {
+    background-color: #2eb7c9;
+}
+
+.next-previous-options-carousel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 40vh;
+}
+
+.next-previous-options-carousel > button {
+    background-color: transparent;
+    border: none;
+    font-size: 2.2vmax;
+    cursor: pointer;
+    color: white;
+    transition: 0.42s all;
+    margin: 0 0.5vmax;
+}
+
+.next-previous-options-carousel > button:hover {
+    font-size: 3vmax;
+}
+
+
+
+@media screen and (max-width: 759px) {
+    .carousel-container-main {
+        height: 69vh;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }    
+
+    .carousel-container-main::before {
+        box-shadow: inset 59px -96px 120px 34px rgba(0,0,0,0.72);
+        height: 69vh;
+    }
+    .carousel-container-main > img {
+        width: 100%;
+        height: 69vh;
+    }
+
+    .carousel-movie-details {
+        position: absolute;
+        color: white;
+        top: 30vh;
+        margin-left: 8vmax;
+        transition: 0.12s all;
+    }
+
+    .next-previous-options-carousel {
+        top: 34.5vh;
+    }
+}
+
+
+@media screen and (max-width: 559px) {
+    .carousel-movie-details {
+        position: absolute;
+        color: white;
+        top: 30vh;
+        margin-left: 8vmax;
+        transition: 0.12s all;
+    }
+
+    .carousel-movie-details > h1 {
+        font-size: 2.7vmax;
+    }
+
+    .carousel-movie-details-inline > p {
+        font-size: 1.5vmax;
+    }
+
+    .next-previous-options-carousel {
+        top: 34.5vh;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .carousel-container-main {
+        display: flex;
+        justify-content: center;
+        height: 52vh;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .carousel-container-main::before {
+        height: 52vh;
+        overflow: hidden;
+        box-shadow: inset 59px -96px 120px 34px rgba(0,0,0,0.72);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .carousel-container-main > img {
+        height: 52vh;
+    }
+
+    .carousel-movie-details {
+        color: white;
+        top: 30vh;
+        transition: 0.12s all;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        height: 20vh;
+    }
+
+    .details-container-carousel {
+        height: 50px;
+    }
+    
+    .details-movie-details {
+        visibility: hidden;
+    }
+
+    .next-previous-options-carousel {
+        top: 34.5vh;
+    }
+
+    .watch-now-button-carousel {
+        top: -10px;
+    }
+}

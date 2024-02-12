@@ -1,0 +1,139 @@
+.landing-page-container-main  {
+    height: fit-content;
+    overflow: hidden;
+}
+
+.mini-carousel-landing-page {
+    position: relative;
+    top: -10vh;
+
+    transition: 0.42s all;
+}
+
+.mini-carousel-landing-page> h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    color: #cecece;
+}
+
+.recommended-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.recommended-section-basic {
+    display: flex;
+    align-items: center;
+}
+
+.basic-recommended-sec-1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5vmax;
+    color: white;
+    padding-left: 1vmax;
+}
+
+.recommended-logo {
+    color: #00acc1;
+    font-size: 34px;
+}
+
+.button-standard-type-landing-page {
+    border: 1px solid #888888;
+    background-color: transparent;
+    color: #888888;
+    margin: 0 0.5vmax;
+    padding: 6px;
+
+    border-radius: 13px;
+    transition: 0.32s all;
+}
+
+
+.button-standard-type-landing-page:hover {
+    border-color: #00acc1;
+    color: #00acc1;
+    cursor: pointer;
+}
+
+.recommended-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1vmax;
+}
+
+.Movies-button.active,
+.Tv-shows-button.active
+{
+    border-color: #00acc1;
+    color: #00acc1;
+}
+
+@media screen and (max-width: 760px) {
+    .landing-page-container-main  {
+        overflow: hidden;
+    }
+
+
+    .mini-carousel-landing-page> h3 {
+        font-size: 15px;
+    }
+
+
+    .recommended-section-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1vmax;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .mini-carousel-landing-page {
+        position: relative;
+        top: 1vh;
+        transition: 0.42s all;
+    }
+
+    .recommended-section-basic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .basic-recommended-sec-1 {
+        display: flex;
+        align-items: center;
+        gap: 0.5vmax;
+        color: white;
+        padding-left: 1vmax;
+        margin-top: 10px;
+    }
+
+
+    .recommended-buttons {
+        margin-bottom: 12px;
+    }
+
+    .recommended-buttons > button {
+        margin-right: 10px;
+    }
+
+    .basic-recommended-sec-1 > h1 {
+        font-size: 20px;
+    }
+
+    .recommended-logo {
+        font-size: 20px;
+    }
+
+    .button-standard-type-landing-page {
+        padding: 4px;
+    }
+}

@@ -1,0 +1,76 @@
+.main-container-upload-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #181818;
+}
+
+.main-div-upload-movie {
+    border-radius: 13px;
+    color: white;
+    display: flex;
+
+
+    height: 100vh;
+}
+
+.name-basic-details-upload-movie {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-details-standard-movie-upload {
+    display: flex;
+    margin: 1vmax;
+    gap: 1vmax;
+    align-items: center;
+}
+
+.basic-details-standard-movie-upload > h3 {
+    width: 100px;
+}
+
+.basic-details-standard-movie-upload > input {
+    border-radius: 8px;
+    height: 20px;
+}
+
+.hd-basic-details-radio {
+    display: flex;
+    justify-content: center;
+}
+
+.final-div-upload-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1vmax;
+}
+
+.final-div-upload-movie > input::file-selector-button {
+    display: inline-block;
+    padding: 0.7vmax;
+    cursor: pointer;
+}
+
+.upload-button-upload-movie {
+    margin: 2vmax 0;
+    padding: 1.6vh 2.5vw;
+    border: 1.6px solid;
+    border-radius: 13px;
+    background-color: transparent;
+    color: white;
+
+    transition: 0.42s all;
+}
+
+.upload-button-upload-movie:hover {
+    background-color: #00acc1;
+    cursor: pointer;
+}
+
+.server-details-upload-movie > h2 {
+    text-align: center;
+}

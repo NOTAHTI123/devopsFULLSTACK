@@ -1,0 +1,42 @@
+.card-main-container {
+    width: 230px;
+    height: 42vh;
+    margin-bottom: 4vmax;
+    margin: 0 1vmax;
+    color: #888888;
+}
+
+.card-main-container:hover {
+    cursor: pointer;
+    transition: 0.32s all;
+}
+
+.card-main-container > img {
+    width: 220px;
+    height: 33vh;
+    border-radius: 13px;
+    transition: 0.32s all;
+}
+
+.card-main-container > img:hover {
+    width: 230px;
+    height: 35vh;
+}
+
+.card-details-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -14px;
+    height: 38px;
+}
+
+.card-details-container > p {
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.card-main-container > h5 {
+    color: #e9e9e9;
+    font-size: 15px;
+    margin-top: -5px;
+}
