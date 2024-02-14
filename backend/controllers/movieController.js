@@ -59,16 +59,16 @@ exports.addMovie = catchAsyncErrors(async (req, res, next) => {
 exports.getAllMovies = catchAsyncErrors(async (req, res, next) => {
 
 
-    // const apiFeatures = new ApiFeatures(Movie.find(), req.query)
-    // .search()
-    // .filter()
-    // .pagination(10)
+    const apiFeatures = new ApiFeatures(Movie.find(), req.query)
+    .search()
+    .filter()
+    .pagination(10)
 
-    // const movies = await apiFeatures.query;
+    const movies = await apiFeatures.query;
 
     res.status(200).json({
         success: true,
-        // movies
+        movies
     })
 })
 
