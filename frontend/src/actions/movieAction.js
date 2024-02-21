@@ -34,11 +34,11 @@ export const getMovies = (keyword="", currentPage=1, category, rating=0) => asyn
         let link;
 
         if(category) {
-            link = `http://192.168.103.111:32002/api/fmovies/movies/all&page=${currentPage}&rating[gte]=${rating}&category=${category}`;
+            link = `http://192.168.1.111:32002/api/fmovies/movies/all&page=${currentPage}&rating[gte]=${rating}&category=${category}`;
         }
 
         else {
-            link = `http://192.168.103.111:32002/api/fmovies/movies/all?keyword=${keyword}&page=${currentPage}&rating[gte]=${rating}`;
+            link = `http://192.168.1.111:32002/api/fmovies/movies/all?keyword=${keyword}&page=${currentPage}&rating[gte]=${rating}`;
         }
 
         let { data } = await axios.get(link);
@@ -60,7 +60,7 @@ export const getMovieDetails = (id) => async(dispatch) => {
     try {
         dispatch({type: MOVIE_DETAILS_REQUEST});
 
-        let { data } = await axios.get(`http://192.168.103.111:32002/api/fmovies/movie/${id}`);
+        let { data } = await axios.get(`http://192.168.1.111:32002/api/fmovies/movie/${id}`);
 
         dispatch({
             type: MOVIE_DETAILS_SUCCESS,
@@ -101,7 +101,7 @@ export const uploadMovie = (movieData) => async (dispatch) => {
 
         const config = { headers: { 'Content-Type': 'multipart/form-data' } };
 
-        const { data } = await axios.post('http://192.168.103.111:32002/api/fmovies/movie/new', movieDataMain, config);
+        const { data } = await axios.post('http://192.168.1.111:32002/api/fmovies/movie/new', movieDataMain, config);
 
         dispatch({
             type: ADD_MOVIE_SUCCESS,
