@@ -64,7 +64,7 @@ exports.getAllMovies = catchAsyncErrors(async (req, res, next) => {
     .filter()
     .pagination(10)
 
-    const movies = await apiFeatures.query;
+    const movies = await apiFeatures.query.exec();
 
     res.status(200).json({
         success: true,
