@@ -34,7 +34,7 @@ const Header = () => {
         <>
             <div className="header-container-main">
                 <div className="first-div-header">
-                    { /* <a href="/pk"><img src={FMOVIESLOGO} alt="" /></a> */}
+                    <a href="/pk"><img src={FMOVIESLOGO} alt="" /></a>
                 </div>
                 <div className="search-div-header">
                     <input type="text" placeholder='Search movies...' onChange={handleChange} />
