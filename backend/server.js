@@ -22,9 +22,10 @@ cloudinary.config({
 
 // Load SSL certificate
 const options = {
-    key: fs.readFileSync('./Nginx/Certificates/api/fullchain.pem'),
-    cert: fs.readFileSync('./Nginx/Certificates/api/privkey.pem'),
+    key: fs.readFileSync('./Nginx/Certificates/api/privkey.pem'),
+    cert: fs.readFileSync('./Nginx/Certificates/api/fullchain.pem'),
 };
+
 
 // Create an HTTPS server
 const secureServer = https.createServer(options, server).listen(process.env.SERVER_PORT, () => {
