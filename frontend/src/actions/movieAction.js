@@ -34,11 +34,13 @@ export const getMovies = (keyword="", currentPage=1, category, rating=0) => asyn
         let link;
 
         if(category) {
-            link = `https://api.cinemarque.exton-cs.me:8443/api/fmovies/movies/all&page=${currentPage}&rating[gte]=${rating}&category=${category}`;
+            // link = `https://api.cinemarque.exton-cs.me:8443/api/fmovies/movies/all&page=${currentPage}&rating[gte]=${rating}&category=${category}`;
+            link = `https://192.168.103.111:31000/api/fmovies/movies/all&page=${currentPage}&rating[gte]=${rating}&category=${category}`;
         }
 
         else {
-            link = `https://api.cinemarque.exton-cs.me:8443/api/fmovies/movies/all?keyword=${keyword}&page=${currentPage}&rating[gte]=${rating}`;
+            // link = `https://api.cinemarque.exton-cs.me:8443/api/fmovies/movies/all?keyword=${keyword}&page=${currentPage}&rating[gte]=${rating}`;
+            link = `https://192.168.103.111:31000/api/fmovies/movies/all?keyword=${keyword}&page=${currentPage}&rating[gte]=${rating}`;
         }
 
         let { data } = await axios.get(link);
@@ -60,7 +62,8 @@ export const getMovieDetails = (id) => async(dispatch) => {
     try {
         dispatch({type: MOVIE_DETAILS_REQUEST});
 
-        let { data } = await axios.get(`https://api.cinemarque.exton-cs.me:8443/api/fmovies/movie/${id}`);
+        // let { data } = await axios.get(`https://api.cinemarque.exton-cs.me:8443/api/fmovies/movie/${id}`);
+        let { data } = await axios.get(`https://192.168.103.111:31000/api/fmovies/movie/${id}`);
 
         dispatch({
             type: MOVIE_DETAILS_SUCCESS,
@@ -101,7 +104,8 @@ export const uploadMovie = (movieData) => async (dispatch) => {
 
         const config = { headers: { 'Content-Type': 'multipart/form-data' } };
 
-        const { data } = await axios.post('https://api.cinemarque.exton-cs.me:8443/api/fmovies/movie/new', movieDataMain, config);
+        // const { data } = await axios.post('https://api.cinemarque.exton-cs.me:8443/api/fmovies/movie/new', movieDataMain, config);
+        const { data } = await axios.post('https://192.168.103.111:31000/api/fmovies/movie/new', movieDataMain, config);
 
         dispatch({
             type: ADD_MOVIE_SUCCESS,
