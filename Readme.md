@@ -1,4 +1,4 @@
-**FMOVIESZ Full stack clone**
+**CineMarque**
 Being developed by: 
 [@NOTAHTI123](https://github.com/NOTAHTI123)https://github.com/NOTAHTI123
 
